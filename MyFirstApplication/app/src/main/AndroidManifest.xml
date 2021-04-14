@@ -11,6 +11,9 @@
         android:theme="@style/Theme.MyFirstApplication">
         <activity android:name=".DisplayMessageActivity"></activity>
         <activity android:name=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
