@@ -1,10 +1,10 @@
 package com.example.myfirstapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -15,7 +15,8 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
+        message += " ";
+        message += getString(R.string.curse);
         TextView textView = findViewById(R.id.textView);
         textView.setText(message);
     }
